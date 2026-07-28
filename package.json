@@ -1,0 +1,44 @@
+{
+  "name": "nca-backend",
+  "private": true,
+  "version": "0.0.0",
+  "description": "NCA / NexusAI backend \u2014 NestJS REST API",
+  "scripts": {
+    "build": "node api.js && nest build",
+    "dev": "node api.js && nest start --watch",
+    "start": "node api.js && nest start",
+    "start:prod": "node dist/main.js",
+    "check": "tsc --noEmit -p tsconfig.json",
+    "postinstall": "prisma generate",
+    "prisma:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "db:migrate:dev": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.1",
+    "@nestjs/config": "^4.0.0",
+    "@nestjs/core": "^11.0.1",
+    "@nestjs/jwt": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.1",
+    "@prisma/client": "^6.2.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.1",
+    "cookie": "^1.1.1",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "openai": "^6.45.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.10.1",
+    "prisma": "^6.2.1",
+    "typescript": "~5.9.3"
+  }
+}
